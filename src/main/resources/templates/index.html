@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      flex: 1;
+    }
+    .content {
+      background-color: rgb(0, 255, 128);
+      color: white;
+      border-radius: 15px;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+    .content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .btn-custom {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      margin: 10px 0; /* Espaciado vertical */
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: rgb(128, 0, 255);
+      color: white;
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: rgb(128, 0, 255);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="content">
+    <h1>PROYECTO FUTBOL</h1> 
+    <p>Explora los diferentes aspectos del proyecto</p> 
+    <a href="/verClub" class="btn btn-light btn-custom d-block">Ver Club</a>
+    <a href="/verEntrenador" class="btn btn-light btn-custom d-block">Ver Entrenadores</a>
+    <a href="/verAsociacion" class="btn btn-light btn-custom d-block">Ver Asociaciones</a>
+	<a href="/verJugador" class="btn btn-light btn-custom d-block">Ver Jugadores</a>
+  </div>
+</div>
+
+<footer>
+  <p>HECHO POR: Felipe García</p>
+</footer>
+
+</body>
+</html>

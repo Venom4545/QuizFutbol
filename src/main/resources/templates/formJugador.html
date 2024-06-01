@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Jugador</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Serif+Pro&display=swap"
+        rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: #f8f9fa;
+        }
+
+        h1, h2, h4 {
+            color: #343a40;
+        }
+
+        .form-control {
+            border-radius: 0;
+            border-color: #343a40;
+        }
+
+        .form-floating label {
+            color: #343a40;
+        }
+
+        .form-floating input::placeholder {
+            color: #6c757d;
+        }
+
+        .btn-dark {
+            background-color: #343a40;
+            border-color: #343a40;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-dark:hover {
+            background-color: #23272b;
+            border-color: #23272b;
+        }
+
+        .btn-outline-dark {
+            color: #343a40;
+            border-color: #343a40;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="container d-flex flex-column justify-content-center align-items-center">
+    <main class="d-flex justify-content-center flex-column align-items-center p-3 m-3">
+        <h1>Ingresar Jugador</h1>
+        <form th:action="@{/guardarJugador}" th:object="${jugador}" method="post"
+            class="d-flex flex-column p-5 g-3 needs-validation m-3">
+            <input type="hidden" th:field="*{id}" />
+            <h4>Ingrese los datos del Jugador:</h4>
+
+            <div class="mb-3 form-floating">
+                <input type="text" class="form-control" name="nombre" placeholder=" " th:field="*{nombre}" required>
+                <label for="nombre" class="form-label">Nombre de Jugador</label>
+            </div>
+
+            <div class="mb-3 form-floating">
+                <input type="text" class="form-control" name="numero" placeholder=" " th:field="*{numero}" required>
+                <label for="numero" class="form-label">Número</label>
+            </div>
+
+            <div class="mb-3 form-floating">
+                <input type="text" class="form-control" name="posicion" placeholder=" " th:field="*{posicion}" required>
+                <label for="posicion" class="form-label">Posición</label>
+            </div>
+			<div class="mb-4 form-floating">
+				<select th:field="*{club}" class="form-select" required>
+				    <th:block th:each="club: ${listaClub}">
+				        <option th:if="${club != null}" th:text="${club.nombre}" th:value="${club.id}"></option>
+				    </th:block>
+				</select>
+			                <label class="col-sm-4 col-form-label">Club:</label>
+			            </div>
+
+            <div class="d-flex mb-3">
+                <input type="submit" class="form-control btn-outline-dark me-4" value="Enviar">
+                <a th:href="@{/verJugador/formJugador}" class="btn btn-outline-primary">Restablecer</a>
+            </div>
+        <a href="/verJugador" class="form-control btn btn-dark"> Volver a Inicio</a>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
