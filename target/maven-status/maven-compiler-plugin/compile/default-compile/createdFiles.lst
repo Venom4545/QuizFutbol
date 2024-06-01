@@ -1,0 +1,13 @@
+com\QuizFutbolFelipe\app\QuizFutbolApplication.class
+com\QuizFutbolFelipe\controller\EntrenadorController.class
+com\QuizFutbolFelipe\entity\Jugador.class
+com\QuizFutbolFelipe\controller\AsociacionController.class
+com\QuizFutbolFelipe\controller\JugadorController.class
+com\QuizFutbolFelipe\controller\ClubController.class
+com\QuizFutbolFelipe\entity\Asociacion.class
+com\QuizFutbolFelipe\repository\EntrenadoresRepository.class
+com\QuizFutbolFelipe\entity\Club.class
+com\QuizFutbolFelipe\repository\JugadorRepository.class
+com\QuizFutbolFelipe\repository\AsociacionRepository.class
+com\QuizFutbolFelipe\entity\Entrenadores.class
+com\QuizFutbolFelipe\repository\ClubRepository.class

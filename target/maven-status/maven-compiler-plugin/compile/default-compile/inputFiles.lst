@@ -1,0 +1,13 @@
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\app\QuizFutbolApplication.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\controller\AsociacionController.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\controller\ClubController.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\controller\EntrenadorController.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\controller\JugadorController.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\entity\Asociacion.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\entity\Club.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\entity\Entrenadores.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\entity\Jugador.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\repository\AsociacionRepository.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\repository\ClubRepository.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\repository\EntrenadoresRepository.java
+C:\Users\LENOVO\Desktop\sts-4.22.1.RELEASE\Felipe Garcia\QuizFutbol\src\main\java\com\QuizFutbolFelipe\repository\JugadorRepository.java

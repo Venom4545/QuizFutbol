@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Clubes Registrados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .section__title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(0, 255, 128);
+        }
+        .table-container {
+            background-color: #80ff80; /* Menta claro */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .table {
+            background-color: rgb(128, 255, 128); /* Menta */
+            color: #004d40; /* Verde oscuro */
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .btn-xs {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+        .btn-outline-primary {
+            color: rgb(0, 255, 128);
+            border-color: rgb(0, 255, 128);
+        }
+        .btn-outline-primary:hover {
+            background-color: rgb(0, 255, 128);
+            color: white;
+        }
+        .btn-outline-success {
+            color: rgb(128, 0, 255);
+            border-color: rgb(128, 0, 255);
+        }
+        .btn-outline-success:hover {
+            background-color: rgb(128, 0, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-4">
+        <center><h2 class="section__title">Clubes Registrados</h2></center><br><br>
+        <div class="table-container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Entrenador</th>
+                        <th>Asociación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="club: ${listaClub}">
+                        <td th:text="${club.id}"></td>
+                        <td th:text="${club.nombre}"></td>
+                        <td th:text="${club.entrenadores.nombre}"></td>
+                        <td th:text="${club.asociacion.nombre}"></td>
+                        <td>
+                            <a class="btn btn-info btn-xs" th:href="@{'/club/editar/'+${club.id}}">Editar</a>
+                            &nbsp;&nbsp;
+                            <a class="btn btn-danger btn-xs" th:href="@{'/club/eliminar/'+${club.id}}">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <div class="p-3">
+                <a th:href="@{/verClub/formClub}" class="btn btn-outline-primary">Insertar Club</a>
+            </div>
+            <div class="p-3">
+                <a th:href="@{/index}" class="btn btn-outline-success">Volver</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
